@@ -4,12 +4,14 @@ import { IoIosArrowDown,IoIosArrowUp } from "react-icons/io";
 
 const Links = () => {
     const [navOpen,setNavOpen] = useState(false);
-    const [open,setOpen] = useState(false);
+    const [loginOpen,setLoginOpen] = useState(false);
 
 
     return (
         <div className="flex md:flex-col gap-4 min-h-screen">
 
+            {/* NAVBAR */}
+    
             <div>
                 <div className="flex flex-row justify-between bg-gray-200 p-2 cursor-pointer rounded-md" onClick={()=>setNavOpen(!navOpen)}>
                     <h4 className="text-xl font-medium">Navbar</h4>
@@ -28,22 +30,25 @@ const Links = () => {
             </div>
 
 
+            {/* Login */}
+    
             <div>
-                <div className="flex flex-row justify-between bg-gray-200 p-2" onClick={()=>setOpen(!open)}>
-                    <h4 className="text-xl font-medium">Test Code</h4>
-                    <span className="text-xl font-medium">{open? <IoIosArrowUp/>:<IoIosArrowDown />}</span>
+                <div className="flex flex-row justify-between bg-gray-200 p-2 cursor-pointer rounded-md" onClick={()=>setLoginOpen(!loginOpen)}>
+                    <h4 className="text-xl font-medium">Login</h4>
+                    <span className="text-xl font-medium">{loginOpen? <IoIosArrowUp/>:<IoIosArrowDown />}</span>
                 </div>
                 {
-                    open? <div className="flex flex-col gap-1">
-                        <Link className="border-2 border-pink-500" to='code1'>Test3</Link>
-                        <Link className="border-2 border-pink-500" to='/test4'>test4</Link>
-                        <Link className="border-2 border-pink-500" to='/test5'>test5</Link>
+                    loginOpen? <div className="flex flex-col gap-1">
+                        <Link className="border-2 border-pink-500" to='transparent-login'>Transparent Login</Link>
+                        <Link className="border-2 border-pink-500" to='code3'>code3</Link>
+                        <Link className="border-2 border-pink-500" to='/tes4'>test4</Link>
                     </div>
                     :
                     <div></div>
                 }
                 
             </div>
+
 
 
 
