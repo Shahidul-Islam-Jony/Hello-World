@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-// import logo from '../../../assets/images/logo3.png'
+import logo from '../../../assets/images/Logo/world.png'
 import { IoMdLogIn } from "react-icons/io";
 
 const Navbar = () => {
@@ -24,7 +24,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className='flex flex-row items-center gap-4'>
-                        <img src='' className='w-20 h-16 hidden md:block' alt="" />
+                        <img src={logo} className='w-28 h-16 hidden md:block' alt="" />
                         <h4 className='text-2xl w-32 md:w-fit md:text-4xl font-extrabold font-carattere bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-transparent bg-clip-text px-1'>Hello World</h4>
                     </div>
                 </div>
